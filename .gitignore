@@ -1,0 +1,16 @@
+/.vscode
+x86Barebones/.bash_history
+x86Barebones/.gdb_history
+
+#Binary Files
+*.bin
+*.sys
+
+#The images
+*.img
+*.qcow2
+*.vmdk
+
+#Object files
+*.o
+x86Barebones/.gitignore
