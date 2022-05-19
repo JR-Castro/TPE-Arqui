@@ -5,6 +5,7 @@
 #include <idtLoader.h>
 #include <defs.h>
 #include <interrupts.h>
+#include <syscalls.h>
 
 static void setup_IDT_entry (int index, uint64_t offset);
 

@@ -1,17 +1,8 @@
-#include <time.h>
-#include <stdint.h>
+#include <irqDispatcher.h>
 
-static void int_20();
+void (*handlers[15])() = {timer_handler, keyboard_handler};
 
 void irqDispatcher(uint64_t irq) {
-	switch (irq) {
-		case 0:
-			int_20();
-			break;
-	}
+	(handlers[irq])();
 	return;
-}
-
-void int_20() {
-	timer_handler();
 }
